@@ -19,7 +19,7 @@ export default function Page() {
           {/* Up */}
           <div className="w-full h-[10.5vh] relative flex justify-center items-center gap-4">
             <motion.div
-              className="w-full h-full bg-primary-300 rounded-xl"
+              className="w-full h-full p-6 bg-primary-300 rounded-xl flex items-center justify-between"
               // initial={{ opacity: 0.5, scale: 0, y: 70 }}
               // animate={{ opacity: 1, scale: 1, y: 0 }}
               // transition={{ duration: 0.5,
@@ -34,7 +34,14 @@ export default function Page() {
                 bounce: 0,  
               }}
             >
-
+              <div className="w-fit h-full flex items-center justify-center">
+                <h1 className="text-2xl text-black font-gilroy font-light italic uppercase">Julia <span className="font-medium not-italic">Huang</span></h1>
+              </div>
+              <ul className="w-fit h-full flex items-center justify-center gap-6">
+                <li className="text-base text-black font-gilroy font-light uppercase">Project</li>
+                <li className="text-base text-black font-gilroy font-light uppercase">About</li>
+                <li className="text-base text-black font-gilroy font-light uppercase">Contact</li>
+              </ul>
             </motion.div>
           </div>
 

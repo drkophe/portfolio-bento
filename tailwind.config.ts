@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        // sans: ['MyFont', ...defaultTheme.fontFamily.sans], // Utilise MyFont avec une fallback
+        gilroy: ['gilroy'], // Une classe dédiée à MyFont
+      },
       aspectRatio: {
         '4/3': '4 / 3',
         'portrait': '9 / 16',

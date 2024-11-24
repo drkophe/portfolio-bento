@@ -14,6 +14,7 @@ export default {
       },
       aspectRatio: {
         '4/3': '4 / 3',
+        '10/13': '9 / 13',
         'portrait': '9 / 16',
       },
       colors: {

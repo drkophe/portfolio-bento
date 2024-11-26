@@ -45,35 +45,62 @@ export default function Page() {
 
   return (
     <main className='w-full h-screen relative'>
-      <section className="flex items-center justify-center h-screen  bg-neutral-900 sticky top-0 z-10">
+      <section className="flex items-center justify-center flex-col h-screen  bg-neutral-900 sticky top-0 z-10">
+        <div className="flex items-center justify-center">
+          { svgTab.map((svg, index) => (
+            <div className="flex items-center justify-center relative w-fit h-fit" key={index}>
+              <svg className="w-36 h-auto" viewBox="0 0 61 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.path
+                  d={svg}
+                  stroke="white"
+                  strokeWidth="0.5"
+                  strokeLinecap="round"
+                  strokeLinejoin={"round"}
+    
+                  style={{
+                    pathLength: smoothPathLength,
+                  }}
+                />
+              </svg>
+              <svg className="w-36 h-auto absolute top-0 left-0" viewBox="0 0 61 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.path
+                  d={svg}
+                  fill={"white"} 
 
-        { svgTab.map((svg, index) => (
-          <div className="flex items-center justify-center relative w-fit h-fit" key={index}>
-            <svg className="w-36 h-auto" viewBox="0 0 61 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <motion.path
-                d={svg}
-                stroke="white"
-                strokeWidth="0.5"
-                strokeLinecap="round"
-                strokeLinejoin={"round"}
-  
-                style={{
-                  pathLength: smoothPathLength,
-                }}
-              />
-            </svg>
-            <svg className="w-36 h-auto absolute top-0 left-0" viewBox="0 0 61 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <motion.path
-                d={svg}
-                fill={"white"} 
+                  style={{
+                    fillOpacity: smoothFillOpacity,
+                  }}
+                />
+              </svg>
+            </div>
+          ))}
+        </div>
 
-                style={{
-                  fillOpacity: smoothFillOpacity,
-                }}
-              />
-            </svg>
-          </div>
-        ))}
+        <div>
+          <motion.h2 
+            className="text-9xl font-inter font-thin lowercase flex space-x-9"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 4,
+                delay: 1.5,
+              }
+            }}
+          >
+            <p className="">a</p>
+            <p className="">n</p>
+            <p className="">a</p>
+            <p className="">s</p>
+            <p className="">t</p>
+            <p className="">a</p>
+            <p className="">s</p>
+            <p className="">i</p>
+            <p className="">a</p>
+          </motion.h2>
+        </div>
       </section>
     </main>
   );

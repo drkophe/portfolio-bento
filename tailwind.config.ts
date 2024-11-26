@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         // sans: ['MyFont', ...defaultTheme.fontFamily.sans], // Utilise MyFont avec une fallback
         gilroy: ['gilroy'], // Une classe dédiée à MyFont
+        inter: ['var(--font-inter)'],
       },
       aspectRatio: {
         '4/3': '4 / 3',

@@ -45,7 +45,7 @@ export default function Page() {
 
   return (
     <main className='w-full h-screen relative'>
-      <section className="flex items-center justify-center flex-col h-screen  bg-neutral-900 sticky top-0 z-10">
+      <section className="flex items-center justify-center flex-col h-screen bg-neutral-900 sticky top-0 z-10"> {/* bg-[#9c766c] */}
         <div className="flex items-center justify-center">
           { svgTab.map((svg, index) => (
             <div className="flex items-center justify-center relative w-fit h-fit" key={index}>

@@ -1,8 +1,13 @@
 'use client';
+import clsx from "clsx";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useState } from "react";
 // import { style } from "framer-motion/client";
 
 export default function Page() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  // const [openIndex, setOpenIndex] = useState(0);
 
   // Tableau d'image
   const images = [
@@ -29,12 +34,20 @@ export default function Page() {
             style={{ x }}
             >
                 {images.map((image, index) => (
-                    <div 
-                      className="relative h-96 aspect-10/13 overflow-hidden bg-black"  
+                    <motion.div 
+                      className={clsx(
+                        "relative h-96 aspect-10/13 overflow-hidden bg-black",                        
+                      )} 
+
+                      // style={{
+                      //   width: isOpen && openIndex === index ? "100vw" : "auto",
+                      //   height: isOpen && openIndex === index ? "100vh" : "24rem",
+                      // }}
+                      
                       key={index}
                       onClick={() => { 
-                        // faire une animation pour que l'image s'affiche en plein milieu
-                        
+                        setIsOpen(true);
+                        // setOpenIndex(index);                    
                        }}
                     >
 
@@ -49,7 +62,7 @@ export default function Page() {
                             }}
                             />
 
-                    </div>
+                    </motion.div>
                 ))}
             </motion.div>
         </section>

@@ -1,6 +1,6 @@
 'use client';
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { style } from "framer-motion/client";
+// import { style } from "framer-motion/client";
 
 export default function Page() {
 
